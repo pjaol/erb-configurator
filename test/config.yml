@@ -1,0 +1,10 @@
+# a comment 
+hostname:
+    dev: http://dev.epals.com
+    qa: http://qa.epals.com
+    prod: http://prod.epals.com
+
+foo:
+    dev: http://dev.foo.com
+    qa: http://qa.foo.com
+    prod: http://prod.foo.com
