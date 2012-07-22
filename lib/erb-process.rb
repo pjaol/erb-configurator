@@ -14,7 +14,11 @@ module ERBProcess
     #puts yml.inspect
     config = {}
     yml.each_key do |key|
-      config[key] = yml[key][env.downcase]
+      if yml[key].has_key?(env.downcase)
+        config[key] = yml[key][env.downcase]
+      else
+        warn "WARNING: "<< @variables<<" does not have a "<<key<<" for environment "<<env
+      end
     end
     
     content = File.read(File.expand_path(@template))

@@ -12,5 +12,5 @@ Gem::Specification.new do |s|
   s.files       = Dir.glob("lib/**/*.rb")
   s.executables = "erb-process"
   s.test_files  = Dir.glob("test/**")
-  s.homepage    = 'http://rubygems.org/gems/erb-process'
+  s.homepage    = 'https://github.com/pjaol/erb-configurator'
 end

@@ -14,9 +14,17 @@ Usage
 
 example
 
-* erb-process test/config.yml test/example_config.erb prod > my_prod_config 
+* erb-process test/config.yml test/example_config.erb prod > prod.conf 
 	
 	-- (direct standard output to your config file)
+	
+The contents of prod.conf is now:
+
+    host: http://prod.epals.com
+	bar: http://prod.foo.com
+	
+This can be made as complex as you wish using standard ERB templates.
+
 
 Installation
 --------
