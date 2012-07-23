@@ -62,7 +62,9 @@ test/example_config.erb
 
 	    host: <%= config["hostname"]%>
 		bar: <%= config['foo']%>
+		this_host: <%= ERBProcess.gethostname%>
 
+The method ERBProcess.gethostname returns the current hostname
 
 Production farms
 --------
