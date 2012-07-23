@@ -60,7 +60,21 @@ e.g.
 The ERB template can now access these variables 
 test/example_config.erb
 
-    host: <%= config["hostname"]%>
-	bar: <%= config['foo']%>
+	    host: <%= config["hostname"]%>
+		bar: <%= config['foo']%>
+
+
+Production farms
+--------
+erb-process will also check for the existence & contents of a file on local disk to determine the appropriate environment
+
+    echo "QA" >/hosttype
+	or 
+	echo "QA" > c:\hosttype
+
+Will ensure that QA environments will be used in erb-process by default on that host. This can be overwritten by passing in the env as a third parameter to esb-process
+
+
+
 
 	
