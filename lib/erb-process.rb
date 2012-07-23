@@ -1,6 +1,7 @@
 require "erb"
 require "yaml"
 require "erbprocess/version"
+require 'socket'
 
 module ERBProcess
 
@@ -24,6 +25,10 @@ module ERBProcess
     content = File.read(File.expand_path(@template))
     t = ERB.new(content)
     return t.result(binding)
+  end
+  
+  def ERBProcess.gethostname
+    return Socket.gethostname.first
   end
  
 end
