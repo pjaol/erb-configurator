@@ -8,7 +8,7 @@ module ERBProcess
   def ERBProcess.process variables, template, env = "DEV"
     @variables =  variables
     @template = template
-    @env = env
+    env = env.chomp
     
     yml = YAML.load_file(@variables)
     #puts @template
