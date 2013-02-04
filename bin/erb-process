@@ -10,7 +10,7 @@ environment = "DEV"
 if ARGV.length == 3
   environment = ARGV[2]
 else
-  os = Config::CONFIG['host_os']
+  os = RbConfig::CONFIG['host_os']
   if os =~ /mswin32/i
     if File.exist?("C:\hosttype")
       environment = File.read("C:\hosttype")
